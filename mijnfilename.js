@@ -1,5 +1,5 @@
 console.log(``);
-console.log(`             ===== LEVEL 18 - Array methods - deel 2 =====`);
+console.log(`               ===== LEVEL 18 - Array methods - deel 2 =====`);
 console.log(``);
 console.log(``);
 
@@ -17,11 +17,10 @@ console.log(``);
 
 console.log(`===== Opdracht B:  .forEach method. of  .map method. =====`);
 const arry = [1, 2, 3];
-const doubleArrayValues = () => {
-}
-console.log(`...`);
-// result should be [2, 4, 6]
-console.log(``);
+const double = arry.map(function (item, index, array) {
+    return item * 2
+});
+console.log(double);
 
 console.log(`===== Opdracht C:  number higher then 10 =====`);
 const numbers = [1, 4, 3, 6, 9, 7, 11, 30];
@@ -57,9 +56,8 @@ console.log(``);
 console.log(`===== Opdracht G:  Bonus! .reduce method totaal van arry optellen =====`);
 const numbers5 = [1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 11, 77, 84, 98, 101, 206, 234];
 
-const bigsom = numbers5.reduce((currentTotal, item) => {
-    return item + currentTotal
+const bigsom = numbers5.reduce((currentSom, item) => {
+    return item + currentSom
 }, 0)
-
 console.log(`This is te total: ${bigsom}`);
-console.log(``);
+console.log(`===`);
