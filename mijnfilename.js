@@ -1,59 +1,65 @@
 console.log(``);
-console.log(`             ===== LEVEL 18 - Array methods - deel 1 =====`);
+console.log(`             ===== LEVEL 18 - Array methods - deel 2 =====`);
 console.log(``);
 console.log(``);
 
-console.log(`===== Opdracht A: cool aan array toevoegen met push method =====`);
-const words = ["nice", "awesome", "tof"];
-const addTheWordCool = () => {
-    console.log(words);
-    words.push('Cool');
-    console.log(words);
+console.log(`===== Opdracht A:  .find method. =====`);
+const superheroes = [
+    { name: "Batman", alter_ego: "Bruce Wayne" },
+    { name: "Superman", alter_ego: "Clark Kent" },
+    { name: "Spiderman", alter_ego: "Peter Parker" }
+];
+const findSpidy = superheroes.find((hero) => {
+    return hero.name === 'Spiderman'
+})
+console.log(findSpidy);
+console.log(``);
+
+console.log(`===== Opdracht B:  .forEach method. of  .map method. =====`);
+const arry = [1, 2, 3];
+const doubleArrayValues = () => {
 }
-addTheWordCool();
+console.log(`...`);
+// result should be [2, 4, 6]
 console.log(``);
 
-console.log(`===== Opdracht B: Elementen retouneren =====`);
-const bucket = ['apple', 'mango', 'banana', 'orange'];
-const howManyFruits = () => console.log(`The total of fruits in the bucket: ${bucket.length}`);
-howManyFruits();
+console.log(`===== Opdracht C:  number higher then 10 =====`);
+const numbers = [1, 4, 3, 6, 9, 7, 11, 30];
+const higherThenTen = numbers.filter((number) => {
+    return number >= 10
+})
+console.log(`These are the numbers higher then Ten: ${higherThenTen}`);
 console.log(``);
 
-console.log(`===== Opdracht C: First land in list =====`);
-const selectBelgiumFromBenelux = ["Belgie", "Nederland", "Luxemburg"];
-console.log(selectBelgiumFromBenelux);
-const firstLand = () => console.log(`The first land in the list: ${selectBelgiumFromBenelux[0]}`);
-firstLand();
+console.log(`===== Opdracht D:  look for string: "Italy" =====`);
+const lands = ['Canada', 'France', 'Germany', 'Italy', 'Japan', 'United Kingdom', 'United States'];
+const isItalyInTheGreat7 = lands.some((land) => {
+    return land === 'Italy'
+})
+console.log(`Jazeker, het is: ${isItalyInTheGreat7}`);
 console.log(``);
 
-console.log(`===== Opdracht D: Remove last animal =====`);
-const lastElementInArray = ["Haas", "Cavia", "Kip", "Schildpad"];
-const getLastAnimal = () => {
-    //lastElementInArray.pop()
-    console.log(lastElementInArray.pop());
-}
-getLastAnimal();
+console.log(`===== Opdracht E:  .forEach.  elke integer vertienvoudigt.=====`);
+const numbers2 = [1, 4, 3, 6, 9, 7, 11];
+numbers2.forEach((num) => {
+    console.log(num * 10);
+})
 console.log(``);
 
-console.log(`===== Opdracht E: first element remove slice vs splice =====`);
-const presidents = ["Trump", "Obama", "Bush", "Clinton"];
-const impeachTrumpSlice = () => console.log(`${presidents.slice(1)}, Slice do not modifies the arry`);
-impeachTrumpSlice();
-const impeachTrumpSplice = () => console.log(`${presidents.splice(1)}, Splice modifies the arry.`);
-impeachTrumpSplice()
+console.log(`===== Opdracht F:  true or false onder de honderd =====`);
+const numbers4 = [1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 14, 10, 77, 84, 98];
+const underHundred = numbers4.some((num) => {
+    return num > 100
+})
+console.log(`Status getallen boven de 100 staat op: ${underHundred}`);
 console.log(``);
 
-console.log(`===== Opdracht F: JOIN the elements together =====`);
-const stringsTogether = ['Winc', 'Academy', 'is', 'leuk', ';-}'];
-console.log(stringsTogether);
-const joinAll = () => console.log(stringsTogether.join(" "));
-joinAll();
-console.log(``);
+console.log(`===== Opdracht G:  Bonus! .reduce method totaal van arry optellen =====`);
+const numbers5 = [1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 11, 77, 84, 98, 101, 206, 234];
 
-console.log(`===== Opdracht G: combining arrays with concat =====`);
-const arry1 = [1, 2, 3];
-const arry2 = [4, 5, 6];
+const bigsom = numbers5.reduce((currentTotal, item) => {
+    return item + currentTotal
+}, 0)
 
-const combineArrays = () => console.log(arry1.concat(arry2));
-combineArrays();
+console.log(`This is te total: ${bigsom}`);
 console.log(``);
